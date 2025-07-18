@@ -1,0 +1,47 @@
+package sqa.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import sqa.main.Ranking;
+
+class RobustnessTest {
+
+	Ranking rank  = new Ranking();
+	
+	@ParameterizedTest
+	@CsvSource({
+		"50000,3,-1,Please enter an integer",
+		"50000,3,0,Standard",
+		"50000,3,1,Standard",
+		"50000,3,500,Gold",
+		"50000,3,999,Gold",
+		"50000,3,1000,Gold",
+		"50000,3,1001,Standard",
+		"-1,3,500,Please enter an integer",
+		"0,3,500,Standard",
+		"1,3,500,Standard",
+		"99999,3,500,Gold",
+		"100000,3,500,Gold",
+		"100001,3,500,Standard",
+		"50000,-1,500,Please enter an integer",
+		"50000,0,500,Standard",
+		"50000,1,500,Silver",
+		"50000,6,500,Standard",
+		"50000,7,500,Standard",
+		"50000,8,500,Standard",
+		
+	})
+	@DisplayName("Use Csv Source")
+	void testRankWithCsvSource(int purchaseTotal, int frequency, int pointCollected, String expected) {
+		
+	String result = rank.CalculateMembershipRank(purchaseTotal, frequency, pointCollected);
+	assertEquals(expected, result);
+	}
+	
+	
+	
+}

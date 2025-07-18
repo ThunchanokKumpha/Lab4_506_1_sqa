@@ -1,0 +1,25 @@
+package sqa.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+
+import sqa.main.Ranking;
+
+class RobustnessTest {
+
+	Ranking rank  = new Ranking();
+	
+	@ParameterizedTest
+	@CsvFileSource(files = "src/sqa.test.resources/TestRobust.csv", numLinesToSkip = 1)
+	@DisplayName("Get test data from .csv file")
+	void testWithCsvFileSourceFromFile(int purchaseTotal, int frequency, int pointCollected, String expected) {
+		
+	String result = rank.CalculateMembershipRank(purchaseTotal, frequency, pointCollected);
+	assertEquals(expected, result);
+	}
+	
+
+}

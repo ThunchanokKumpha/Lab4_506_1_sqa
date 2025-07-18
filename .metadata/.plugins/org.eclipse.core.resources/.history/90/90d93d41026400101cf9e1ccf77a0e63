@@ -1,0 +1,11 @@
+package sqa.test;
+
+import static org.junit.jupiter.api.Assertions.*; 
+import main.Ranking; 
+import org.junit.jupiter.api.Test;
+
+public class NormalBoundaryTest {
+	
+	@Test
+	
+}

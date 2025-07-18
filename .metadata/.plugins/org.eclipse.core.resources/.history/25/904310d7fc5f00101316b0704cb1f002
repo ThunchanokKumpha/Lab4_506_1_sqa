@@ -1,0 +1,43 @@
+package test;
+
+
+import static org.junit.jupiter.api.Assertions.*; 
+import main.RomanNumerals; 
+import org.junit.jupiter.api.Test;
+
+
+
+class TestRomanNumerals {
+//
+//	@org.junit.jupiter.api.Test
+//	void test() {
+//		fail("Not yet implemented");
+//	}
+	
+	@Test
+	void testonedigitI() {
+		RomanNumerals num = new RomanNumerals();
+		int result = num.convertRomanNumToInt("I");
+		assertEquals(1, result);;
+	}
+	
+	@Test
+		void testonedigitV() {
+		RomanNumerals num = new RomanNumerals();
+		int result = num.convertRomanNumToInt("V");
+		assertEquals(5, result);;
+	}
+	
+	
+	@Test
+	void testtwodigitIV() {
+		RomanNumerals num = new RomanNumerals();
+		int result = num.convertRomanNumToInt("XXXXX");
+		assertEquals(50, result);;
+	}
+	
+	
+	
+	
+
+}

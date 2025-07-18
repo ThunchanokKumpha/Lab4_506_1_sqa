@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RobustnessTest" project="MembershipRanking" tests="0" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="sqa.test.RobustnessTest" displayname="RobustnessTest" uniqueid="[engine:junit-jupiter]/[class:sqa.test.RobustnessTest]">
+    <testsuite name="testWithCsvFileSourceFromFile(sqa.test.RobustnessTest)" incomplete="true" displayname="Get test data from .csv file" parameters="int,int,int,java.lang.String" uniqueid="[engine:junit-jupiter]/[class:sqa.test.RobustnessTest]/[test-template:testWithCsvFileSourceFromFile(int, int, int, java.lang.String)]">
+      <error>org.junit.platform.commons.JUnitException: File [src/sqa.test/resources/TestRobust.csv] could not be read&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)&#13;
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)&#13;
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)&#13;
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)&#13;
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)&#13;
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)&#13;
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)&#13;
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)&#13;
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)&#13;
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)&#13;
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)&#13;
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	Suppressed: org.junit.platform.commons.PreconditionViolationException: Configuration error: You must configure at least one set of arguments for this @ParameterizedTest&#13;
+		at java.base/java.util.stream.AbstractPipeline.close(AbstractPipeline.java:323)&#13;
+		at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:273)&#13;
+		... 9 more&#13;
+Caused by: java.nio.file.NoSuchFileException: src\sqa.test\resources\TestRobust.csv&#13;
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)&#13;
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)&#13;
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)&#13;
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)&#13;
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)&#13;
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)&#13;
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)&#13;
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)&#13;
+	... 29 more&#13;
+&#13;
+</error>
+    </testsuite>
+  </testsuite>
+</testrun>

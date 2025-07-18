@@ -1,0 +1,102 @@
+package test;
+
+
+import static org.junit.jupiter.api.Assertions.*; 
+import main.RomanNumerals; 
+import org.junit.jupiter.api.Test;
+
+
+
+class TestRomanNumerals {
+//
+//	@org.junit.jupiter.api.Test
+//	void test() {
+//		fail("Not yet implemented");
+//	}
+	
+	//TS001
+	//TC01: RomanNumber = "I", expected result = 1
+	@Test
+	void TestOneDigitI() {
+		RomanNumerals roman  = new RomanNumerals();
+		int result = roman .convertRomanNumToInt("I");
+		assertEquals(1, result);
+	}
+	
+	//TC02: RomanNumber = "V", expected result = 5
+	@Test
+		void TestOneDigitV() {
+		RomanNumerals roman  = new RomanNumerals();
+		int result = roman .convertRomanNumToInt("V");
+		assertEquals(5, result);
+	}
+	
+	//TC03: RomanNumber = "X", expected result = 10
+		@Test
+			void TestOneDigitX() {
+			RomanNumerals roman  = new RomanNumerals();
+			int result = roman .convertRomanNumToInt("X");
+			assertEquals(10, result);
+		}
+	//TC04: RomanNumber = "L", expected result = 50
+		@Test
+			void TestOneDigitL() {
+			RomanNumerals roman  = new RomanNumerals();
+			int result = roman .convertRomanNumToInt("L");
+			assertEquals(50, result);
+		}	
+	
+	//TC05: RomanNumber = "C", expected result = 100
+		@Test
+			void TestOneDigitC() {
+			RomanNumerals roman  = new RomanNumerals();
+			int result = roman .convertRomanNumToInt("C");
+			assertEquals(100, result);
+		}
+	//TC06: RomanNumber = "D", expected result = 500
+		@Test
+			void TestOneDigitD() {
+			RomanNumerals roman  = new RomanNumerals();
+			int result = roman .convertRomanNumToInt("D");
+			assertEquals(500, result);
+		}
+	
+	//TC07: RomanNumber = "M", expected result = 1000
+		@Test
+			void TestOneDigitM() {
+			RomanNumerals roman  = new RomanNumerals();
+			int result = roman .convertRomanNumToInt("M");
+			assertEquals(1000, result);
+		}
+		
+	
+		
+		
+	//TS002	
+	//TC08: RomanNumber = "IV", expected result = 4
+	@Test
+	void TestTwoDigitIV() {
+		RomanNumerals roman  = new RomanNumerals();
+		int result = roman .convertRomanNumToInt("IV");
+		assertEquals(4, result);
+	}
+	
+	@Test
+	void TestTwoDigitXL() {
+		RomanNumerals roman  = new RomanNumerals();
+		int result = roman .convertRomanNumToInt("XL");
+		assertEquals(40, result);
+	}
+	@Test
+	void TestTwoDigitXC() {
+		RomanNumerals roman  = new RomanNumerals();
+		int result = roman .convertRomanNumToInt("XC");
+		assertEquals(90, result);
+	}
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,276 @@
+package test;
+
+
+import static org.junit.jupiter.api.Assertions.*; 
+import main.RomanNumerals; 
+import org.junit.jupiter.api.Test;
+
+
+
+class TestRomanNumerals {
+	
+//
+//	@org.junit.jupiter.api.Test
+//	void test() {
+//		fail("Not yet implemented");
+//	}
+	
+	
+    // TS001: Single digit
+    // TC01: RomanNumber = "I", expected result = 1
+    @Test
+    void TestOneDigitI() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("I");
+        assertEquals(1, result);
+    }
+
+    // TC02: RomanNumber = "V", expected result = 5
+    @Test
+    void TestOneDigitV() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("V");
+        assertEquals(5, result);
+    }
+
+    // TC03: RomanNumber = "X", expected result = 10
+    @Test
+    void TestOneDigitX() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("X");
+        assertEquals(10, result);
+    }
+
+    // TC04: RomanNumber = "L", expected result = 50
+    @Test
+    void TestOneDigitL() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("L");
+        assertEquals(50, result);
+    }
+
+    // TC05: RomanNumber = "C", expected result = 100
+    @Test
+    void TestOneDigitC() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("C");
+        assertEquals(100, result);
+    }
+
+    // TC06: RomanNumber = "D", expected result = 500
+    @Test
+    void TestOneDigitD() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("D");
+        assertEquals(500, result);
+    }
+
+    // TC07: RomanNumber = "M", expected result = 1000
+    @Test
+    void TestOneDigitM() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("M");
+        assertEquals(1000, result);
+    }
+    
+    
+
+    // TS002: Two digits
+    // TC08: RomanNumber = "IV", expected result = 4
+    @Test
+    void TestTwoDigit_IV() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("IV");
+        assertEquals(4, result);
+    }
+
+
+    // TC9: RomanNumber = "XL", expected result = 40
+    @Test
+    void TestTwoDigit_XL() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("XL");
+        assertEquals(40, result);
+    }
+
+    // TC10: RomanNumber = "CD", expected result = 400
+    @Test
+    void TestTwoDigit_CD() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("CD");
+        assertEquals(400, result);
+    }
+
+    // TS003: Two digits – additive
+    // TC11: RomanNumber = "VI", expected result = 6
+    @Test
+    void TestTwoDigit_VI() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("VI");
+        assertEquals(6, result);
+    }
+
+    // TC12: RomanNumber = "CI", expected result = 101
+    @Test
+    void TestTwoDigit_CI() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("CI");
+        assertEquals(101, result);
+    }
+
+    // TS004: Two digits – same
+    // TC13: RomanNumber = "II", expected result = 2
+    @Test
+    void TestTwoDigit_II() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("II");
+        assertEquals(2, result);
+    }
+
+    // TC14: RomanNumber = "XX", expected result = 20
+    @Test
+    void TestTwoDigit_XX() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("XX");
+        assertEquals(20, result);
+    }
+
+    // TS005: Multiple same digits
+    // TC15: RomanNumber = "III", expected result = 3
+    @Test
+    void TestMultiDigit_III() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("III");
+        assertEquals(3, result);
+    }
+
+    // TC16: RomanNumber = "XXX", expected result = 30
+    @Test
+    void TestMultiDigit_XXX() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("XXX");
+        assertEquals(30, result);
+    }
+
+    // TS006: Left-to-right decreasing or equal
+    // TC17: RomanNumber = "XXVI", expected result = 26
+    @Test
+    void TestMultiDigit_XXVI() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("XXVI");
+        assertEquals(26, result);
+    }
+
+    // TC18: RomanNumber = "XXVII", expected result = 27
+    @Test
+    void TestMultiDigit_XXVII() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("XXVII");
+        assertEquals(27, result);
+    }
+
+    // TC19: RomanNumber = "LXVII", expected result = 67
+    @Test
+    void TestMultiDigit_LXVII() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("LXVII");
+        assertEquals(67, result);
+    }
+
+    // TS007: Combination of (subtract, add, repeat)
+    // TC20: RomanNumber = "LXXIV", expected result = 74
+    @Test
+    void TestComplex_LXXIV() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("LXXIV");
+        assertEquals(74, result);
+    }
+
+    // TC21: RomanNumber = "LXXVIII", expected result = 78
+    @Test
+    void TestComplex_LXXVIII() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("LXXVIII");
+        assertEquals(78, result);
+    }
+
+    // TC22: RomanNumber = "LXXXIV", expected result = 84
+    @Test
+    void TestComplex_LXXXIV() {
+        RomanNumerals roman = new RomanNumerals();
+        int result = roman.convertRomanNumToInt("LXXXIV");
+        assertEquals(84, result);
+    }
+
+    // TS008: Not a roman numeral number
+    //TC23: RomanNumber = "A", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+    @Test
+    void TestInvalidCharacter_A() {
+        RomanNumerals roman = new RomanNumerals();
+        assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("A"));
+    }
+
+   
+
+    // TS009: Wrong repeating digits
+    //TC24: RomanNumber = "VV", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+    @Test
+    void TestInvalidRepeat_VV() {
+        RomanNumerals roman = new RomanNumerals();
+        assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("VV"));
+    }
+
+    //TC25: RomanNumber = "LL", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+    @Test
+    void TestInvalidRepeat_LL() {
+        RomanNumerals roman = new RomanNumerals();
+        assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("LL"));
+    }
+    
+    //TC26: RomanNumber = "DD", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+    @Test
+    void TestInvalidRepeat_DD() {
+        RomanNumerals roman = new RomanNumerals();
+        assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("LL"));
+    }
+    
+
+    // TS010: Using more than three repeating roman numerals
+    //TC27: RomanNumber = "IIII", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+    @Test
+    void TestInvalidRepeat_IIII() {
+        RomanNumerals roman = new RomanNumerals();
+        assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("IIII"));
+    }
+    
+
+    @Test
+  //TC28: RomanNumber = "XXXX", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+    void TestInvalidRepeat_XXXX() {
+        RomanNumerals roman = new RomanNumerals();
+        assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("XXXXX"));
+    }
+    
+    @Test
+    //TC29: RomanNumber = "CCCC", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+      void TestInvalidRepeat_CCCC() {
+          RomanNumerals roman = new RomanNumerals();
+          assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("XXXXX"));
+      }
+    
+    @Test
+    //TC30: RomanNumber = "MMMM", expected result = "กรุณาป้อนค่าที่ถูกต้อง"
+      void TestInvalidRepeat_MMMM() {
+          RomanNumerals roman = new RomanNumerals();
+          assertThrows(IllegalArgumentException.class, () -> roman.convertRomanNumToInt("XXXXX"));
+      }
+    
+    
+	
+	
+	
+	
+	
+	
+
+}
