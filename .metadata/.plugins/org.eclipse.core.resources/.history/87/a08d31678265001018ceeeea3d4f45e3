@@ -16,7 +16,7 @@ class RobustnessTest {
 	
 
 		@ParameterizedTest
-		@CsvFileSource(files = "src/sqa/test/resources/testrobust.csv", numLinesToSkip = 1)
+		@CsvFileSource(files = "src/sqa/test/resources/labrobut.csv", numLinesToSkip = 1)
 		@DisplayName("Test data from .csv file - Ranking")
 		void testRankFromCsvFile(int purchaseTotal, int frequency, int pointCollected, String expected) {
 			
